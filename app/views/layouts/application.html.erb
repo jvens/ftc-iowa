@@ -5,10 +5,20 @@
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 <body>
+<div data-role="page" id="page" data-theme="a" style="display:flex;flex-direction:column">
+<%= render "layouts/menu" %>
+<%= render "layouts/search" %>
+<%= render "layouts/header" %>
 
+<div data-role="main" id="content" class="ui-content" style="flex:1">
 <%= yield %>
+</div>
 
+<%= render "layouts/footer" %>
+
+</div>
 </body>
 </html>
