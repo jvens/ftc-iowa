@@ -1,0 +1,9 @@
+<% content_for :title, "Team Upload" %>
+<h2>Team List Upload</h2>
+
+<%= form_tag({action: "upload", controller: "teams"}, {multipart: true, :'data-ajax' => false} ) do %>
+	<%= label_tag(:file, "Team List")%>
+	<%= file_field_tag 'file' %>
+	
+	<%= submit_tag("Upload") %>
+<% end %>

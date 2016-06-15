@@ -1,0 +1,26 @@
+<% content_for :title, "Team #{@team.id}" %>
+
+<h2><%= @team.name %></h2>
+<table>
+	<tr>
+		<td>Number:</td>
+		<td><%= @team.id %></td>
+		<td rowspan="3"><%= image_tag @team.logo.url(:thumb) %><!--<img src="images/logo.png" alt="Logo" width="100%">--></td>
+	</tr>
+	<tr>
+		<td>School:</td>
+		<td><%= @team.school %></td>
+	</tr>
+	<tr>
+		<td>Location:</td>
+		<td><%= "#{@team.city}, #{@team.state}" %></td>
+	</tr>
+</table>
+
+<p><%= @team.description %>
+
+<p><%= image_tag @team.picture.url %>
+
+<br><br><br><br><br><br><br><br><br>
+
+<p><em>Updated At <%= @team.updated_at %></em>

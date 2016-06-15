@@ -1,0 +1,11 @@
+<% content_for :title, "Team List" %>
+
+<form class="ui-filterable">
+	<input id="team-list-filter" data-type="search" placeholder="Search for team...">
+</form>
+
+<ul data-role="listview" data-filter="true" data-input="#team-list-filter" data-inset="true">
+	<% @teams.each do |team| %>
+		<li><%= link_to("#{team.id} - #{team.name}", team) %></li>
+	<% end %>
+</ul>

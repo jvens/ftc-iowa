@@ -1,0 +1,18 @@
+<% content_for :title, "Team Upload" %>
+<h2>Team List Upload</h2>
+
+<%= form_for :teams, url: teams_path html: {multipart: true} do, |f| %>
+	<%= f.label :number %>
+	<%= f.number_field :number %>
+	
+<!--	<%= f.label :name%>
+	<%= f.text_field :name%>
+	
+	<%= f.label :description %>
+	<%= f.text_area :description %><br>
+-->	
+	<%= f.label :team_list%>
+	<%= f.file_field :team_list%>
+	
+	<%= f.submit %>
+<% end %>

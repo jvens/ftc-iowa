@@ -47,3 +47,6 @@ group :development do
   gem 'spring'
 end
 
+# paperclip, used for image uploading
+gem 'paperclip', "~> 5.0.0.beta1"
+
