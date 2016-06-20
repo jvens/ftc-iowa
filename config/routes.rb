@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'webhook/onhook'
+
   get 'welcome/index'
 
   resources :teams do
@@ -10,6 +12,9 @@ Rails.application.routes.draw do
   end
   
   resources :events
+  
+  post 'webhook' => 'webhook#onhook'
+ 
   root 'welcome#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
